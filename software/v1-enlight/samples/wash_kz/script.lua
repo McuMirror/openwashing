@@ -51,7 +51,7 @@ setup = function()
     mode_pause = 60
     -- end of modes which MUST follow each other
     
-    mode_thanks = 120
+    mode_thanks = 0
     real_ms_per_loop = 100
     
     currentMode = mode_welcome
