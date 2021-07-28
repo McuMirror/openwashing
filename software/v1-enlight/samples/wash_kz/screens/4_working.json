@@ -83,7 +83,7 @@
         "id":"balance",
         "type": "digits",
         "position": "655;166",
-        "font": "standard_number",
+        "font": "round_number",
         "symbol_size":"240;405",
         "padding": "1",
         "length": "4",
