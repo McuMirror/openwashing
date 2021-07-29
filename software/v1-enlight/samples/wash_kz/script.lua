@@ -51,7 +51,7 @@ setup = function()
     mode_pause = 60
     -- end of modes which MUST follow each other
     
-    mode_thanks = 0
+    mode_thanks = 120
     real_ms_per_loop = 100
     
     currentMode = mode_welcome
@@ -304,6 +304,16 @@ end
 
 thanks_mode = function()
     set_current_state(0)
+    cash_balance = 0
+    electronical_balance = 0
+    is_waiting_receipt = false
+    increment_cars()
+    if hascardreader() then
+        return mode_choose_method
+    else
+        return mode_ask_for_money
+    end
+
     if is_waiting_receipt == false then
         balance = 0
         show_thanks(thanks_mode_seconds)
@@ -395,7 +405,7 @@ show_pause = function(balance_rur, balance_sec, price_rur)
 end
 
 switch_submodes = function(sub_mode)
-    working:Set("cur_p.index", sub_mode-1) 
+    working:Set("cur_p.index", sub_mode) 
 end
 
 show_thanks =  function(seconds_float)

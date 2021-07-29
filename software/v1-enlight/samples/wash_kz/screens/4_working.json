@@ -106,8 +106,11 @@
         "size":"494;468",
         "visible":"true",
         "index":"0",
-        "length":"7",
+        "length":"8",
         "sources": [
+          {
+            "src":"pic/recommend.png"
+          },
           {
             "src":"programs/p1/ico.png"
           },
