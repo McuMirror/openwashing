@@ -390,7 +390,7 @@ void * DiaGpio_WorkingThread(void * gpio) {
       // not really sure how its working :(
       if(curTime % 25 == 0) {
         for(int i=0;i<=Gpio->MaxButtons;i++) {
-          if(DiaGpio_ReadButton(Gpio, i)) {
+          if(!DiaGpio_ReadButton(Gpio, i)) {
               if(!Gpio->ButtonStatus[i]) {
                   Gpio->ButtonStatus[i] = 1;
                   Gpio->ButtonLastStatusChangeTime[i] = curTime + 100;
