@@ -244,6 +244,7 @@ ask_for_money_mode = function()
 
     update_balance()
     if balance > 0.99 then
+        init_prices()
         return mode_work
     end
     return mode_ask_for_money
