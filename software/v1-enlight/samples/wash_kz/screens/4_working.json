@@ -97,7 +97,7 @@
         "symbol_size":"25;40",
         "padding": "0",
         "length": "3",
-        "visible":"true"
+        "visible":"false"
       },
       {
         "id":"cur_p",
